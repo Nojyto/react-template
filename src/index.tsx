@@ -1,19 +1,53 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React         from "react"
+import {createRoot}  from "react-dom/client"
+import "./style.css"
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//import { useState } from "react"
+//import image from "./images/test.jpg"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+const App = () => {
+	//const [count, setCount] = useState(0);
+  
+	return (
+		<div className='app'>
+			<div>
+				<h1 className="text-3xl font-bold underline">
+					Hello
+				</h1>
+			</div>
+		</div>
+	)
+}
+
+/*class App extends React.Component<any, any> {
+	constructor(props: any) {
+		super(props)
+		this.state = {
+			totalIncome: 0,
+		}
+	}
+
+	render() {
+		return (
+			<div className='app'>
+				<div>
+					<h1>Hello</h1>
+				</div>
+			</div>
+		)
+	}
+}*/
+
+const root = createRoot(document.getElementById("root")!)
+root.render(<App/>)
+
+
+/*
+npx create-react-app <my-app-name> --template typescript
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+npm start
+*/
