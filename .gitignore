@@ -24,4 +24,3 @@ yarn-error.log*
 package-lock.json
 package.json
 src/react-app-env.d.ts
-src/react-app-env.d.ts
