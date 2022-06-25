@@ -11,9 +11,9 @@ const App = () => {
   
 	return (
 		<div className='app'>
-			<div>
+			<div className="text-center align-middle snap-center">
 				<h1 className="text-3xl font-bold underline">
-					Hello
+					Hello world!
 				</h1>
 			</div>
 		</div>
