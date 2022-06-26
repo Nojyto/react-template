@@ -3,7 +3,7 @@ import {createRoot}  from "react-dom/client"
 import axios         from "axios"
 import "./style.css"
 
-//import image from "./images/test.jpg"
+//import image from "./assets/icons/imagestest.jpg"
 
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
 	//console.log(apiData)
 
 	return (
-		<div className='app'>
+		<div className="app">
 			<div className="text-center align-middle bg-secondary min-h-screen">
 				<h1 className="text-3xl text-white">
 					{apiData}
