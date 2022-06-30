@@ -1,28 +1,19 @@
 import React         from "react"
 import {createRoot}  from "react-dom/client"
-import axios         from "axios"
 import "./style.css"
+import APIcall       from "./components/APIcall"
 
-//import image from "./assets/icons/imagestest.jpg"
-
+//import image from "./assets/images/imagestest.jpg"
+//import icon  from "./assets/icons/iconstest.jpg"
 
 const App = () => {
-	const [apiData, setData] = React.useState(undefined)
-	
-	React.useEffect(() => {
-		const url = "https://v2.jokeapi.dev/joke/Any?type=single"
-		axios.get(url)
-			 .then((rsp)  => {setData(rsp.data.joke)})
-			 .catch((err) => {console.error(err)})
-	}, [])
-	
+	const apiData = APIcall("https://v2.jokeapi.dev/joke/Any?type=single")
 	//console.log(apiData)
-
 	return (
 		<div className="app">
 			<div className="text-center align-middle bg-secondary min-h-screen">
-				<h1 className="text-3xl text-white">
-					{apiData}
+				<h1 className="text-3xl text-white p-8">
+					{apiData.joke}
 				</h1>
 			</div>
 		</div>
