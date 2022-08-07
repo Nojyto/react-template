@@ -1,9 +1,9 @@
 import {useState, useEffect} from "react"
 import axios from "axios"
 
-export const APIcall = (url: string) => {
+export default function APIcall(url: string){
 	const [data, setData]: any = useState([])
-
+	//console.log(apiData)
 	useEffect(() => {
 		axios.get(url)
 			 .then((rsp)  => {setData(rsp.data)})
@@ -12,5 +12,3 @@ export const APIcall = (url: string) => {
 
 	return data
 }
-
-export default APIcall
