@@ -11,4 +11,3 @@ Minimal files and optimal folder layout. With simple API call function already w
 
 - Tailwind
 - Axios
-- reactQuery
